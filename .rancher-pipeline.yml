@@ -2,8 +2,8 @@ stages:
 - name: Build and publish
   steps:
   - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: ./3.3/
+      dockerfilePath: ./3.3/Dockerfile
+      buildContext: .
       tag: nominatim-docker:${CICD_EXECUTION_SEQUENCE}
       registry: 127.0.0.1:34593
 timeout: 60
